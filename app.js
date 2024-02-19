@@ -20,6 +20,11 @@ app.post("/", (req, res) => {
   const lastName = req.body.lName;
   const email = req.body.email;
 
+  if (!firstName || !lastName || !email) {
+    res.sendFile(__dirname + "/failure.html");
+    return;
+  }
+
   const data = {
     members: [
       {
@@ -56,6 +61,10 @@ app.post("/", (req, res) => {
 
   request.write(jsonData);
   request.end();
+});
+
+app.post("/failure", (req, res) => {
+  res.redirect("/");
 });
 
 const PORT = 4000;
