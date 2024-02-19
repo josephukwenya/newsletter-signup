@@ -30,18 +30,19 @@
   </head>
   <body class="d-flex align-items-center py-4 bg-body-tertiary text-center">
     <main class="form-signin w-100 m-auto">
-      <form>
+      <form action="/" method="post">
         <img
           class="mb-4"
           src="./img/gkm-large.png"
           alt=""
           width="72"
           height="72" />
-        <h1 class="h3 mb-3 fw-normal">Newsletter Sign Up</h1>
+        <h1 class="h3 mb-3 fw-normal">Newsletter Sign Up!</h1>
 
         <div class="form-floating">
           <input
             type="text"
+            name="fName"
             class="form-control top"
             placeholder="First Name" />
           <label for="floatingInput">First Name</label>
@@ -49,12 +50,17 @@
         <div class="form-floating">
           <input
             type="text"
+            name="lName"
             class="form-control middle"
             placeholder="Last Name" />
           <label for="floatingInput">Last Name</label>
         </div>
         <div class="form-floating">
-          <input type="email" class="form-control bottom" placeholder="Email" />
+          <input
+            type="email"
+            name="email"
+            class="form-control bottom"
+            placeholder="Email" />
           <label for="floatingPassword">Email</label>
         </div>
 
